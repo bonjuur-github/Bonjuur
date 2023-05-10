@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "429941946513",
+    "project_id": "bonjuur1",
+    "storage_bucket": "bonjuur1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429941946513:android:d5e781f8566fb26865a730",
+        "android_client_info": {
+          "package_name": "com.mycompany.bonjuur"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429941946513-fsl5911lslsr6es7a3g4h433f4e58enf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC51VNhSCXYdL2VU4NIOBax3kgmrSWk0C4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429941946513-fsl5911lslsr6es7a3g4h433f4e58enf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "429941946513-vegu4stvgg7urul2kmsta8ldvo80shn2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.bonjuur"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
