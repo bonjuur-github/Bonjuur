@@ -1,11 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/boards0/boards0_widget.dart';
-import '/edit_profile_info/edit_profile_info_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/term_of_use/term_of_use_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,12 +90,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   size: 20.0,
                                 ),
                                 onPressed: () async {
-                                  await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => HomescreenWidget(),
-                                    ),
-                                  );
+                                  context.pushNamed('homescreen');
                                 },
                               ),
                             ],
@@ -201,12 +192,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => EditProfileInfoWidget(),
-                      ),
-                    );
+                    context.pushNamed('edit_profile_info');
                   },
                   child: Container(
                     width: double.infinity,
@@ -271,12 +257,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => TermOfUseWidget(),
-                      ),
-                    );
+                    context.pushNamed('TermOfUse');
                   },
                   child: Container(
                     width: double.infinity,
@@ -341,14 +322,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
+                    GoRouter.of(context).prepareAuthEvent();
                     await authManager.signOut();
-                    await Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Boards0Widget(),
-                      ),
-                      (r) => false,
-                    );
+                    GoRouter.of(context).clearRedirectLocation();
+
+                    context.goNamedAuth('boards0', context.mounted);
                   },
                   child: Container(
                     width: double.infinity,

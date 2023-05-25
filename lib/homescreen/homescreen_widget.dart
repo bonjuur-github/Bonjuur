@@ -1,17 +1,8 @@
 import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
-import '/checklist_for_customer/checklist_for_customer_widget.dart';
-import '/customer_list_for_cleaners/customer_list_for_cleaners_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/home_page/home_page_widget.dart';
-import '/just_keeping_content/just_keeping_content_widget.dart';
-import '/keeping_plus_content/keeping_plus_content_widget.dart';
-import '/settings/settings_widget.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
-import '/sign_in/sign_in_widget.dart';
-import '/try_gpt/try_gpt_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -112,12 +103,7 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                             ),
                             onPressed: () async {
                               if (loggedIn) {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SettingsWidget(),
-                                  ),
-                                );
+                                context.pushNamed('settings');
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
@@ -132,12 +118,8 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                                     backgroundColor: Color(0xFF7069AD),
                                   ),
                                 );
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SignInWidget(),
-                                  ),
-                                );
+
+                                context.pushNamed('Sign_In');
                               }
                             },
                           ),
@@ -193,14 +175,8 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                                   FFAppState().packageName = 'Just Keeping';
                                   FFAppState().salePrice = 40.0;
                                   FFAppState().lastVisitedPage = 'home_screen';
-                                  await Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          JustKeepingContentWidget(),
-                                    ),
-                                    (r) => false,
-                                  );
+
+                                  context.goNamed('just_keeping_content');
                                 },
                                 child: Container(
                                   width: 170.0,
@@ -261,14 +237,8 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                                   FFAppState().packageName = 'Keeping +';
                                   FFAppState().salePrice = 60.0;
                                   FFAppState().lastVisitedPage = 'home_screen';
-                                  await Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          KeepingPlusContentWidget(),
-                                    ),
-                                    (r) => false,
-                                  );
+
+                                  context.goNamed('keeping_plus_content');
                                 },
                                 child: Container(
                                   width: 170.0,
@@ -371,12 +341,7 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => TryGptWidget(),
-                                  ),
-                                );
+                                context.pushNamed('TRY_GPT');
                               },
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(11.0),
@@ -493,13 +458,7 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  TryGptWidget(),
-                                            ),
-                                          );
+                                          context.pushNamed('TRY_GPT');
                                         },
                                         child: Text(
                                           'All of our keepers are Insured and bonded. Moreover, they are our employees, not contractors!',
@@ -572,12 +531,7 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                             size: 25.0,
                           ),
                           onPressed: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomescreenWidget(),
-                              ),
-                            );
+                            context.pushNamed('homescreen');
                           },
                         ),
                         FlutterFlowIconButton(
@@ -595,31 +549,15 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                               if (valueOrDefault(
                                       currentUserDocument?.userType, '') ==
                                   'cleaner') {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        CustomerListForCleanersWidget(),
-                                  ),
-                                );
+                                context.pushNamed('customer_list_for_cleaners');
                               } else {
                                 if (valueOrDefault(
                                         currentUserDocument?.userType, '') ==
                                     'customer') {
-                                  await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          ChecklistForCustomerWidget(),
-                                    ),
-                                  );
+                                  context.pushNamed('checklist_for_customer');
                                 } else {
-                                  await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => HomePageWidget(),
-                                    ),
-                                  );
+                                  context.pushNamed('HomePage');
+
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
@@ -655,12 +593,8 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                                   backgroundColor: Color(0xFF7069AD),
                                 ),
                               );
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => SignInWidget(),
-                                ),
-                              );
+
+                              context.pushNamed('Sign_In');
                             }
                           },
                         ),
@@ -675,12 +609,7 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                             size: 30.0,
                           ),
                           onPressed: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePageWidget(),
-                              ),
-                            );
+                            context.pushNamed('HomePage');
                           },
                         ),
                         if (valueOrDefault(currentUserDocument?.userType, '') ==
@@ -697,12 +626,7 @@ class _HomescreenWidgetState extends State<HomescreenWidget> {
                                 size: 30.0,
                               ),
                               onPressed: () async {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => ShoppingCartWidget(),
-                                  ),
-                                );
+                                context.pushNamed('shopping_cart');
                               },
                             ),
                           ),

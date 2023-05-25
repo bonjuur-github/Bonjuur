@@ -2,10 +2,6 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/forgot_password/forgot_password_widget.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/register/register_widget.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -317,13 +313,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                await Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        ForgotPasswordWidget(),
-                                                  ),
-                                                );
+                                                context.pushNamed(
+                                                    'forgotPassword');
                                               },
                                               child: Text(
                                                 'Forgot Password?',
@@ -353,6 +344,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       0.0, 30.0, 0.0, 0.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
+                                      GoRouter.of(context).prepareAuthEvent();
+
                                       final user =
                                           await authManager.signInWithEmail(
                                         context,
@@ -365,21 +358,11 @@ class _SignInWidgetState extends State<SignInWidget> {
 
                                       if (FFAppState().lastVisitedPage ==
                                           'shopping_cart') {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                ShoppingCartWidget(),
-                                          ),
-                                        );
+                                        context.pushNamedAuth(
+                                            'shopping_cart', context.mounted);
                                       } else {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                HomescreenWidget(),
-                                          ),
-                                        );
+                                        context.pushNamedAuth(
+                                            'homescreen', context.mounted);
                                       }
                                     },
                                     text: 'Login',
@@ -437,13 +420,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    RegisterWidget(),
-                                              ),
-                                            );
+                                            context.pushNamed('Register');
                                           },
                                           child: Text(
                                             'Sign up',

@@ -6,8 +6,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
-import '/maps/maps_widget.dart';
-import '/settings/settings_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -103,12 +101,7 @@ class _EditProfileInfoWidgetState extends State<EditProfileInfoWidget> {
                       size: 20.0,
                     ),
                     onPressed: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SettingsWidget(),
-                        ),
-                      );
+                      context.pushNamed('settings');
                     },
                   ),
                 ],
@@ -522,12 +515,7 @@ class _EditProfileInfoWidgetState extends State<EditProfileInfoWidget> {
                           size: 20.0,
                         ),
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MapsWidget(),
-                            ),
-                          );
+                          context.pushNamed('maps');
                         },
                       ),
                     ),

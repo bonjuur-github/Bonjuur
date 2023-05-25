@@ -105,6 +105,85 @@ class BonjuurGPTCall {
       );
 }
 
+class SpeechToTextAzureCall {
+  static Future<ApiCallResponse> call() {
+    final body = '''
+{
+  "links": {
+    "files": "string"
+  },
+  "properties": {
+    "diarizationEnabled": true,
+    "wordLevelTimestampsEnabled": true,
+    "displayFormWordLevelTimestampsEnabled": true,
+    "duration": "string",
+    "channels": [
+      0
+    ],
+    "destinationContainerUrl": "string",
+    "punctuationMode": "None",
+    "profanityFilterMode": "None",
+    "timeToLive": "string",
+    "diarization": {
+      "speakers": {
+        "minCount": 0,
+        "maxCount": 0
+      }
+    },
+    "languageIdentification": {
+      "candidateLocales": [
+        "string"
+      ],
+      "speechModelMapping": {}
+    },
+    "email": "string",
+    "error": {
+      "code": "string",
+      "message": "string"
+    }
+  },
+  "self": "string",
+  "model": {
+    "self": "string"
+  },
+  "project": {
+    "self": "string"
+  },
+  "dataset": {
+    "self": "string"
+  },
+  "contentUrls": [
+    "string"
+  ],
+  "contentContainerUrl": "string",
+  "locale": "string",
+  "displayName": "string",
+  "description": "string",
+  "customProperties": {},
+  "lastActionDateTime": "string",
+  "status": "NotStarted",
+  "createdDateTime": ""
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'SpeechToTextAzure',
+      apiUrl:
+          'https://eastus.api.cognitive.microsoft.com/speechtotext/v3.1/transcriptions',
+      callType: ApiCallType.POST,
+      headers: {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': 'bf9d844393304c12b7a712f430998c54',
+      },
+      params: {},
+      body: body,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;

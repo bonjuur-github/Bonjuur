@@ -1,5 +1,4 @@
 import '/backend/backend.dart';
-import '/edit_profile_info/edit_profile_info_widget.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_place_picker.dart';

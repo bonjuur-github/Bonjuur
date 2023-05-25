@@ -1,9 +1,11 @@
 import '/backend/api_requests/api_calls.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/custom_functions.dart' as functions;
+import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -48,45 +50,109 @@ class _TryGptWidgetState extends State<TryGptWidget> {
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return StreamBuilder<List<KeepingPlusIsDoneFormRecord>>(
-      stream: queryKeepingPlusIsDoneFormRecord(
-        queryBuilder: (keepingPlusIsDoneFormRecord) =>
-            keepingPlusIsDoneFormRecord.where('customer_uid',
-                isEqualTo: widget.relatedCustomerIDForGpt),
-        singleRecord: true,
-      ),
-      builder: (context, snapshot) {
-        // Customize what your widget looks like when it's loading.
-        if (!snapshot.hasData) {
-          return Center(
-            child: SizedBox(
-              width: 30.0,
-              height: 30.0,
-              child: CircularProgressIndicator(
-                color: Color(0xFF7069AD),
-              ),
-            ),
-          );
-        }
-        List<KeepingPlusIsDoneFormRecord>
-            tryGptKeepingPlusIsDoneFormRecordList = snapshot.data!;
-        // Return an empty Container when the item does not exist.
-        if (snapshot.data!.isEmpty) {
-          return Container();
-        }
-        final tryGptKeepingPlusIsDoneFormRecord =
-            tryGptKeepingPlusIsDoneFormRecordList.isNotEmpty
-                ? tryGptKeepingPlusIsDoneFormRecordList.first
-                : null;
-        return GestureDetector(
-          onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
-          child: Scaffold(
-            key: scaffoldKey,
-            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-            body: SafeArea(
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        body: SafeArea(
+          top: true,
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+            child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await actions.speechToText();
+                      },
+                      text: 'Button',
+                      options: FFButtonOptions(
+                        width: 130.0,
+                        height: 40.0,
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
+                    child: Text(
+                      FFAppState().stt,
+                      style: FlutterFlowTheme.of(context).bodyMedium,
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await requestPermission(microphonePermission);
+                        await actions.speechToText();
+                        await Future.delayed(
+                            const Duration(milliseconds: 9000));
+                        _model.azureOpenAiResult = await BonjuurGPTCall.call(
+                          messages: FFAppState().sttSendText,
+                        );
+                        if ((_model.azureOpenAiResult?.succeeded ?? true)) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'SUCCEED',
+                                style: TextStyle(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                ),
+                              ),
+                              duration: Duration(milliseconds: 4000),
+                              backgroundColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                            ),
+                          );
+                        }
+
+                        setState(() {});
+                      },
+                      text: FFAppState().btnTalk,
+                      options: FFButtonOptions(
+                        width: 130.0,
+                        height: 40.0,
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 50.0, 10.0, 0.0),
@@ -220,7 +286,7 @@ class _TryGptWidgetState extends State<TryGptWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                     child: Text(
                       BonjuurGPTCall.messageContent(
-                        (_model.apiResponse?.jsonBody ?? ''),
+                        (_model.azureOpenAiResult?.jsonBody ?? ''),
                       ).toString(),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -271,12 +337,20 @@ class _TryGptWidgetState extends State<TryGptWidget> {
                       ),
                     ),
                   ),
+                  Container(
+                    width: double.infinity,
+                    height: 200.0,
+                    child: custom_widgets.SoundRecordAndPlay(
+                      width: double.infinity,
+                      height: 200.0,
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }

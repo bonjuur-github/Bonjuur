@@ -1,12 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/checklist_for_cleaner/checklist_for_cleaner_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/home_page/home_page_widget.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -210,7 +206,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue1 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD1!,
+                                                                            .kiD1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -329,7 +325,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue2 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD2!,
+                                                                            .kiD2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -448,7 +444,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue3 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD3!,
+                                                                            .kiD3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -567,7 +563,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue4 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD4!,
+                                                                            .kiD4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -686,7 +682,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue5 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD5!,
+                                                                            .kiD5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -805,7 +801,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue6 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD6!,
+                                                                            .kiD6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -924,7 +920,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue7 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD7!,
+                                                                            .kiD7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1043,7 +1039,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue8 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiD8!,
+                                                                            .kiD8,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1185,7 +1181,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue9 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroD1!,
+                                                                            .diroD1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1304,7 +1300,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue10 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroD2!,
+                                                                            .diroD2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1423,7 +1419,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue11 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroD3!,
+                                                                            .diroD3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1565,7 +1561,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue12 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuD1!,
+                                                                            .ofstuD1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1684,7 +1680,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue13 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuD2!,
+                                                                            .ofstuD2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1803,7 +1799,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue14 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuD3!,
+                                                                            .ofstuD3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -1945,7 +1941,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue15 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroD1!,
+                                                                            .faroD1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2064,7 +2060,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue16 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroD2!,
+                                                                            .faroD2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2183,7 +2179,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue17 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroD3!,
+                                                                            .faroD3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2325,7 +2321,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue18 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baD1!,
+                                                                            .baD1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2444,7 +2440,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue19 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baD2!,
+                                                                            .baD2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2563,7 +2559,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue20 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baD3!,
+                                                                            .baD3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2682,7 +2678,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue21 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baD4!,
+                                                                            .baD4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2801,7 +2797,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue22 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baD5!,
+                                                                            .baD5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -2920,7 +2916,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue23 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baD6!,
+                                                                            .baD6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3062,7 +3058,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue24 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beD1!,
+                                                                            .beD1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3181,7 +3177,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue25 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beD2!,
+                                                                            .beD2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3300,7 +3296,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue26 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beD3!,
+                                                                            .beD3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3419,7 +3415,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue27 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beD4!,
+                                                                            .beD4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3572,7 +3568,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue28 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiW1!,
+                                                                            .kiW1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3691,7 +3687,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue29 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiW2!,
+                                                                            .kiW2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3810,7 +3806,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue30 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiW3!,
+                                                                            .kiW3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -3929,7 +3925,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue31 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiW4!,
+                                                                            .kiW4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4048,7 +4044,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue32 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiW5!,
+                                                                            .kiW5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4190,7 +4186,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue33 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW1!,
+                                                                            .diroW1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4309,7 +4305,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue34 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW2!,
+                                                                            .diroW2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4428,7 +4424,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue35 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW3!,
+                                                                            .diroW3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4547,7 +4543,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue36 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW4!,
+                                                                            .diroW4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4666,7 +4662,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue37 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW5!,
+                                                                            .diroW5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4785,7 +4781,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue38 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW6!,
+                                                                            .diroW6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -4904,7 +4900,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue39 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroW7!,
+                                                                            .diroW7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5046,7 +5042,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue40 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuW1!,
+                                                                            .ofstuW1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5165,7 +5161,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue41 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuW2!,
+                                                                            .ofstuW2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5284,7 +5280,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue42 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuW3!,
+                                                                            .ofstuW3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5403,7 +5399,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue43 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuW4!,
+                                                                            .ofstuW4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5522,7 +5518,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue44 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuW5!,
+                                                                            .ofstuW5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5641,7 +5637,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue45 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuW6!,
+                                                                            .ofstuW6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5783,7 +5779,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue46 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroW1!,
+                                                                            .faroW1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -5902,7 +5898,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue47 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroW2!,
+                                                                            .faroW2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6021,7 +6017,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue48 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroW3!,
+                                                                            .faroW3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6140,7 +6136,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue49 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroW4!,
+                                                                            .faroW4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6259,7 +6255,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue50 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroW5!,
+                                                                            .faroW5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6378,7 +6374,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue51 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroW6!,
+                                                                            .faroW6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6520,7 +6516,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue52 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW1!,
+                                                                            .baW1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6639,7 +6635,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue53 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW2!,
+                                                                            .baW2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6758,7 +6754,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue54 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW3!,
+                                                                            .baW3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6877,7 +6873,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue55 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW4!,
+                                                                            .baW4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -6996,7 +6992,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue56 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW5!,
+                                                                            .baW5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7115,7 +7111,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue57 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW6!,
+                                                                            .baW6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7234,7 +7230,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue58 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baW7!,
+                                                                            .baW7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7376,7 +7372,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue59 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW1!,
+                                                                            .beW1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7495,7 +7491,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue60 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW2!,
+                                                                            .beW2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7614,7 +7610,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue61 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW3!,
+                                                                            .beW3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7733,7 +7729,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue62 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW4!,
+                                                                            .beW4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7852,7 +7848,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue63 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW5!,
+                                                                            .beW5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -7971,7 +7967,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue64 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW6!,
+                                                                            .beW6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8090,7 +8086,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue65 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beW7!,
+                                                                            .beW7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8243,7 +8239,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue66 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM1!,
+                                                                            .kiM1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8362,7 +8358,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue67 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM2!,
+                                                                            .kiM2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8481,7 +8477,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue68 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM3!,
+                                                                            .kiM3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8600,7 +8596,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue69 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM4!,
+                                                                            .kiM4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8719,7 +8715,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue70 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM5!,
+                                                                            .kiM5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8838,7 +8834,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue71 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM6!,
+                                                                            .kiM6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -8957,7 +8953,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue72 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM7!,
+                                                                            .kiM7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9076,7 +9072,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue73 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM8!,
+                                                                            .kiM8,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9195,7 +9191,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue74 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM9!,
+                                                                            .kiM9,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9314,7 +9310,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue75 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiM10!,
+                                                                            .kiM10,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9456,7 +9452,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue76 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM1!,
+                                                                            .diroM1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9575,7 +9571,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue77 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM2!,
+                                                                            .diroM2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9694,7 +9690,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue78 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM3!,
+                                                                            .diroM3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9813,7 +9809,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue79 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM4!,
+                                                                            .diroM4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -9932,7 +9928,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue80 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM5!,
+                                                                            .diroM5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10051,7 +10047,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue81 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM6!,
+                                                                            .diroM6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10170,7 +10166,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue82 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM7!,
+                                                                            .diroM7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10289,7 +10285,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue83 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .diroM8!,
+                                                                            .diroM8,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10431,7 +10427,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue84 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM1!,
+                                                                            .ofstuM1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10550,7 +10546,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue85 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM2!,
+                                                                            .ofstuM2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10669,7 +10665,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue86 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM3!,
+                                                                            .ofstuM3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10788,7 +10784,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue87 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM4!,
+                                                                            .ofstuM4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -10907,7 +10903,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue88 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM5!,
+                                                                            .ofstuM5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11026,7 +11022,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue89 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM6!,
+                                                                            .ofstuM6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11145,7 +11141,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue90 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM7!,
+                                                                            .ofstuM7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11264,7 +11260,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue91 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .ofstuM8!,
+                                                                            .ofstuM8,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11406,7 +11402,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue92 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM1!,
+                                                                            .faroM1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11525,7 +11521,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue93 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM2!,
+                                                                            .faroM2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11644,7 +11640,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue94 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM3!,
+                                                                            .faroM3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11763,7 +11759,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue95 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM4!,
+                                                                            .faroM4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -11882,7 +11878,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue96 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM5!,
+                                                                            .faroM5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12001,7 +11997,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue97 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM6!,
+                                                                            .faroM6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12120,7 +12116,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue98 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM7!,
+                                                                            .faroM7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12239,7 +12235,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue99 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM8!,
+                                                                            .faroM8,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12358,7 +12354,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue100 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM9!,
+                                                                            .faroM9,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12477,7 +12473,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue101 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .faroM10!,
+                                                                            .faroM10,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12619,7 +12615,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue102 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baM1!,
+                                                                            .baM1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12738,7 +12734,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue103 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baM2!,
+                                                                            .baM2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12857,7 +12853,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue104 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baM3!,
+                                                                            .baM3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -12976,7 +12972,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue105 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baM4!,
+                                                                            .baM4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13095,7 +13091,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue106 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baM5!,
+                                                                            .baM5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13214,7 +13210,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue107 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .baM6!,
+                                                                            .baM6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13356,7 +13352,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue108 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM1!,
+                                                                            .beM1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13475,7 +13471,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue109 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM2!,
+                                                                            .beM2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13594,7 +13590,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue110 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM3!,
+                                                                            .beM3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13713,7 +13709,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue111 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM4!,
+                                                                            .beM4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13832,7 +13828,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue112 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM5!,
+                                                                            .beM5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -13951,7 +13947,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue113 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM6!,
+                                                                            .beM6,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14070,7 +14066,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue114 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .beM7!,
+                                                                            .beM7,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14223,7 +14219,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue115 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiUp1!,
+                                                                            .kiUp1,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14342,7 +14338,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue116 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiUp2!,
+                                                                            .kiUp2,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14461,7 +14457,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue117 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiUp3!,
+                                                                            .kiUp3,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14580,7 +14576,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue118 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiUp4!,
+                                                                            .kiUp4,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14699,7 +14695,7 @@ class _ChecklistForCustomerWidgetState
                                                                     value: _model
                                                                             .checkboxValue119 ??=
                                                                         checklistForCustomerKeepingPlusIsDoneFormRecord!
-                                                                            .kiUp5!,
+                                                                            .kiUp5,
                                                                     onChanged:
                                                                         (newValue) async {
                                                                       setState(() =>
@@ -14819,13 +14815,7 @@ class _ChecklistForCustomerWidgetState
                                         size: 25.0,
                                       ),
                                       onPressed: () async {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                HomescreenWidget(),
-                                          ),
-                                        );
+                                        context.pushNamed('homescreen');
                                       },
                                     ),
                                     FlutterFlowIconButton(
@@ -14843,21 +14833,11 @@ class _ChecklistForCustomerWidgetState
                                                 currentUserDocument?.userType,
                                                 '') ==
                                             'cleaner') {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  ChecklistForCleanerWidget(),
-                                            ),
-                                          );
+                                          context.pushNamed(
+                                              'checklist_for_cleaner');
                                         } else {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  ChecklistForCustomerWidget(),
-                                            ),
-                                          );
+                                          context.pushNamed(
+                                              'checklist_for_customer');
                                         }
                                       },
                                     ),
@@ -14872,13 +14852,7 @@ class _ChecklistForCustomerWidgetState
                                         size: 30.0,
                                       ),
                                       onPressed: () async {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                HomePageWidget(),
-                                          ),
-                                        );
+                                        context.pushNamed('HomePage');
                                       },
                                     ),
                                     FlutterFlowIconButton(
@@ -14892,13 +14866,7 @@ class _ChecklistForCustomerWidgetState
                                         size: 30.0,
                                       ),
                                       onPressed: () async {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                ShoppingCartWidget(),
-                                          ),
-                                        );
+                                        context.pushNamed('shopping_cart');
                                       },
                                     ),
                                   ],

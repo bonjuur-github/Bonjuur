@@ -33,7 +33,19 @@
             </array>
         </dict>
 
+        <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>bonjuur.com</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+        <string>bonjuur</string>
+        </array>
+        </dict>
     </array>
+    <key>FlutterDeepLinkingEnabled</key>
+    <true/>
 
 
 	<key>CFBundleVersion</key>
@@ -42,10 +54,17 @@
 	<true/>
 
 	<key>NSCameraUsageDescription</key>
-    <string>In order to take a picture and use it as your profile photo, this app requires permission to access the camera.</string>
+    <string>In order to add photo to your profile, this app requires to access the camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-    <string>In order to upload photo and use it as your profile photo, this app requires permission to access the photo library.</string>
-
+    <string>In order to upload data, this app requires permission to access the photo library.</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>In order to update checklist via voice, this app requires to access the microphone.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>In order to add your location to your profile, this app requires to access the location.</string>
+	<key>PermissionGroupNotification</key>
+    <string>In order to update you about your home, this app requires to access the notifications.</string>
+	<key>NSCalendarsUsageDescription</key>
+    <string>In order to select start day of your packeage, this app requires to access the calendar.</string>
 
 
 	<key>UILaunchStoryboardName</key>

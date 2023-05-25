@@ -1,14 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/checklist_for_cleaner/checklist_for_cleaner_widget.dart';
-import '/checklist_for_customer/checklist_for_customer_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/home_page/home_page_widget.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -158,16 +153,16 @@ class _CustomerListForCleanersWidgetState
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ChecklistForCleanerWidget(
-                                                  relatedCustomerUid:
-                                                      listViewKeepingPlusIsDoneFormRecord
-                                                          .customerUid,
+                                            context.pushNamed(
+                                              'checklist_for_cleaner',
+                                              queryParams: {
+                                                'relatedCustomerUid':
+                                                    serializeParam(
+                                                  listViewKeepingPlusIsDoneFormRecord
+                                                      .customerUid,
+                                                  ParamType.String,
                                                 ),
-                                              ),
+                                              }.withoutNulls,
                                             );
                                           },
                                           onLongPress: () async {
@@ -296,7 +291,7 @@ class _CustomerListForCleanersWidgetState
                                                                 child: Image
                                                                     .network(
                                                                   circleImageUsersRecord!
-                                                                      .photoUrl!,
+                                                                      .photoUrl,
                                                                   fit: BoxFit
                                                                       .cover,
                                                                 ),
@@ -368,7 +363,7 @@ class _CustomerListForCleanersWidgetState
                                                                         : null;
                                                                     return Text(
                                                                       textUsersRecord!
-                                                                          .displayName!,
+                                                                          .displayName,
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -448,12 +443,7 @@ class _CustomerListForCleanersWidgetState
                         size: 25.0,
                       ),
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomescreenWidget(),
-                          ),
-                        );
+                        context.pushNamed('homescreen');
                       },
                     ),
                     FlutterFlowIconButton(
@@ -469,20 +459,9 @@ class _CustomerListForCleanersWidgetState
                       onPressed: () async {
                         if (valueOrDefault(currentUserDocument?.userType, '') ==
                             'cleaner') {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ChecklistForCleanerWidget(),
-                            ),
-                          );
+                          context.pushNamed('checklist_for_cleaner');
                         } else {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  ChecklistForCustomerWidget(),
-                            ),
-                          );
+                          context.pushNamed('checklist_for_customer');
                         }
                       },
                     ),
@@ -497,12 +476,7 @@ class _CustomerListForCleanersWidgetState
                         size: 30.0,
                       ),
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomePageWidget(),
-                          ),
-                        );
+                        context.pushNamed('HomePage');
                       },
                     ),
                     if (valueOrDefault(currentUserDocument?.userType, '') ==
@@ -519,12 +493,7 @@ class _CustomerListForCleanersWidgetState
                             size: 30.0,
                           ),
                           onPressed: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ShoppingCartWidget(),
-                              ),
-                            );
+                            context.pushNamed('shopping_cart');
                           },
                         ),
                       ),

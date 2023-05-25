@@ -2,14 +2,10 @@ import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/stripe/payment_manager.dart';
-import '/checklist_for_customer/checklist_for_customer_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home_page/home_page_widget.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/sign_in/sign_in_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +74,7 @@ class _ShoppingCartWidgetState extends State<ShoppingCartWidget> {
                     size: 20.0,
                   ),
                   onPressed: () async {
-                    Navigator.pop(context);
+                    context.safePop();
                   },
                 ),
               ],
@@ -775,12 +771,8 @@ class _ShoppingCartWidgetState extends State<ShoppingCartWidget> {
                                           backgroundColor: Color(0xFF7069AD),
                                         ),
                                       );
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => SignInWidget(),
-                                        ),
-                                      );
+
+                                      context.pushNamed('Sign_In');
                                     }
 
                                     setState(() {});
@@ -896,12 +888,7 @@ class _ShoppingCartWidgetState extends State<ShoppingCartWidget> {
                           size: 25.0,
                         ),
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HomescreenWidget(),
-                            ),
-                          );
+                          context.pushNamed('homescreen');
                         },
                       ),
                       FlutterFlowIconButton(
@@ -915,13 +902,7 @@ class _ShoppingCartWidgetState extends State<ShoppingCartWidget> {
                           size: 30.0,
                         ),
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  ChecklistForCustomerWidget(),
-                            ),
-                          );
+                          context.pushNamed('checklist_for_customer');
                         },
                       ),
                       FlutterFlowIconButton(
@@ -935,12 +916,7 @@ class _ShoppingCartWidgetState extends State<ShoppingCartWidget> {
                           size: 30.0,
                         ),
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HomePageWidget(),
-                            ),
-                          );
+                          context.pushNamed('HomePage');
                         },
                       ),
                       FlutterFlowIconButton(
@@ -954,12 +930,7 @@ class _ShoppingCartWidgetState extends State<ShoppingCartWidget> {
                           size: 30.0,
                         ),
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ShoppingCartWidget(),
-                            ),
-                          );
+                          context.pushNamed('shopping_cart');
                         },
                       ),
                     ],

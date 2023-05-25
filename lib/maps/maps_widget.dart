@@ -1,5 +1,4 @@
 import '/backend/backend.dart';
-import '/edit_profile_info/edit_profile_info_widget.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_place_picker.dart';
@@ -186,7 +185,7 @@ class _MapsWidgetState extends State<MapsWidget> {
                       size: 20.0,
                     ),
                     onPressed: () async {
-                      Navigator.pop(context);
+                      context.safePop();
                     },
                   ),
                 ],
@@ -420,19 +419,38 @@ class _MapsWidgetState extends State<MapsWidget> {
                         EdgeInsetsDirectional.fromSTEB(60.0, 0.0, 60.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => EditProfileInfoWidget(
-                              latLangOnEdit: _model.placePickerValue.latLng,
-                              nameOnEdit: _model.placePickerValue.name,
-                              addressOnEdit: _model.placePickerValue.address,
-                              cityOnEdit: _model.placePickerValue.city,
-                              stateOnEdit: _model.placePickerValue.state,
-                              zipcodeOnEdit: _model.placePickerValue.zipCode,
-                              countryOnEdit: _model.placePickerValue.country,
+                        context.pushNamed(
+                          'edit_profile_info',
+                          queryParams: {
+                            'latLangOnEdit': serializeParam(
+                              _model.placePickerValue.latLng,
+                              ParamType.LatLng,
                             ),
-                          ),
+                            'nameOnEdit': serializeParam(
+                              _model.placePickerValue.name,
+                              ParamType.String,
+                            ),
+                            'addressOnEdit': serializeParam(
+                              _model.placePickerValue.address,
+                              ParamType.String,
+                            ),
+                            'cityOnEdit': serializeParam(
+                              _model.placePickerValue.city,
+                              ParamType.String,
+                            ),
+                            'stateOnEdit': serializeParam(
+                              _model.placePickerValue.state,
+                              ParamType.String,
+                            ),
+                            'zipcodeOnEdit': serializeParam(
+                              _model.placePickerValue.zipCode,
+                              ParamType.String,
+                            ),
+                            'countryOnEdit': serializeParam(
+                              _model.placePickerValue.country,
+                              ParamType.String,
+                            ),
+                          }.withoutNulls,
                         );
                       },
                       text: 'Set my address',

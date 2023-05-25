@@ -1,15 +1,9 @@
-import '/active_users/active_users_widget.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/chats/chats_widget.dart';
-import '/checklist_for_cleaner/checklist_for_cleaner_widget.dart';
-import '/checklist_for_customer/checklist_for_customer_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -181,16 +175,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       '_model.textController',
                       Duration(milliseconds: 2000),
                       () async {
-                        await Navigator.push(
-                          context,
-                          PageTransition(
-                            type: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 300),
-                            reverseDuration: Duration(milliseconds: 300),
-                            child: ActiveUsersWidget(
-                              search: _model.textController.text,
+                        context.pushNamed(
+                          'ActiveUsers',
+                          queryParams: {
+                            'search': serializeParam(
+                              _model.textController.text,
+                              ParamType.String,
                             ),
-                          ),
+                          }.withoutNulls,
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.fade,
+                            ),
+                          },
                         );
                       },
                     ),
@@ -276,16 +274,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await Navigator.push(
-                                context,
-                                PageTransition(
-                                  type: PageTransitionType.fade,
-                                  duration: Duration(milliseconds: 300),
-                                  reverseDuration: Duration(milliseconds: 300),
-                                  child: ActiveUsersWidget(
-                                    search: _model.textController.text,
+                              context.pushNamed(
+                                'ActiveUsers',
+                                queryParams: {
+                                  'search': serializeParam(
+                                    _model.textController.text,
+                                    ParamType.String,
                                   ),
-                                ),
+                                }.withoutNulls,
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.fade,
+                                  ),
+                                },
                               );
                             },
                             child: Text(
@@ -503,22 +505,31 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => ChatsWidget(
-                                                email:
-                                                    containerUsersRecord.email,
-                                                chatUser: listViewChatsRecord
-                                                    .reference,
-                                                userRef: currentUserReference,
-                                                userProfile:
-                                                    containerUsersRecord
-                                                        .photoUrl,
-                                                userName: containerUsersRecord
-                                                    .displayName,
+                                          context.pushNamed(
+                                            'Chats',
+                                            queryParams: {
+                                              'email': serializeParam(
+                                                containerUsersRecord.email,
+                                                ParamType.String,
                                               ),
-                                            ),
+                                              'chatUser': serializeParam(
+                                                listViewChatsRecord.reference,
+                                                ParamType.DocumentReference,
+                                              ),
+                                              'userRef': serializeParam(
+                                                currentUserReference,
+                                                ParamType.DocumentReference,
+                                              ),
+                                              'userProfile': serializeParam(
+                                                containerUsersRecord.photoUrl,
+                                                ParamType.String,
+                                              ),
+                                              'userName': serializeParam(
+                                                containerUsersRecord
+                                                    .displayName,
+                                                ParamType.String,
+                                              ),
+                                            }.withoutNulls,
                                           );
 
                                           final chatsUpdateData =
@@ -634,7 +645,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 child: Image
                                                                     .network(
                                                                   circleImageUsersRecord
-                                                                      .photoUrl!,
+                                                                      .photoUrl,
                                                                   fit: BoxFit
                                                                       .cover,
                                                                 ),
@@ -657,7 +668,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                             child:
                                                                 Image.network(
                                                               containerUsersRecord
-                                                                  .photoUrl!,
+                                                                  .photoUrl,
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
@@ -711,7 +722,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             .data!;
                                                                     return Text(
                                                                       textUsersRecord
-                                                                          .displayName!,
+                                                                          .displayName,
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -729,7 +740,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .user)
                                                                 Text(
                                                                   containerUsersRecord
-                                                                      .displayName!,
+                                                                      .displayName,
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -750,7 +761,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             0.0),
                                                                 child: Text(
                                                                   listViewChatsRecord
-                                                                      .lastMessage!
+                                                                      .lastMessage
                                                                       .maybeHandleOverflow(
                                                                     maxChars:
                                                                         35,
@@ -829,8 +840,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 .center,
                                                         children: [
                                                           if (listViewChatsRecord
-                                                                  .messageSeen ??
-                                                              true)
+                                                              .messageSeen)
                                                             FaIcon(
                                                               FontAwesomeIcons
                                                                   .checkDouble,
@@ -839,7 +849,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               size: 20.0,
                                                             ),
                                                           if (!listViewChatsRecord
-                                                              .messageSeen!)
+                                                              .messageSeen)
                                                             Padding(
                                                               padding:
                                                                   EdgeInsetsDirectional
@@ -920,12 +930,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         size: 25.0,
                       ),
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomescreenWidget(),
-                          ),
-                        );
+                        context.pushNamed('homescreen');
                       },
                     ),
                     FlutterFlowIconButton(
@@ -941,20 +946,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       onPressed: () async {
                         if (valueOrDefault(currentUserDocument?.userType, '') ==
                             'cleaner') {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ChecklistForCleanerWidget(),
-                            ),
-                          );
+                          context.pushNamed('checklist_for_cleaner');
                         } else {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  ChecklistForCustomerWidget(),
-                            ),
-                          );
+                          context.pushNamed('checklist_for_customer');
                         }
                       },
                     ),
@@ -969,12 +963,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         size: 30.0,
                       ),
                       onPressed: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomePageWidget(),
-                          ),
-                        );
+                        context.pushNamed('HomePage');
                       },
                     ),
                     if (valueOrDefault(currentUserDocument?.userType, '') ==
@@ -991,12 +980,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             size: 30.0,
                           ),
                           onPressed: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ShoppingCartWidget(),
-                              ),
-                            );
+                            context.pushNamed('shopping_cart');
                           },
                         ),
                       ),

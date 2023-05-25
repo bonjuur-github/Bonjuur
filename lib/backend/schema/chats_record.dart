@@ -1,61 +1,87 @@
 import 'dart:async';
 
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
+
 import 'index.dart';
-import 'serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-part 'chats_record.g.dart';
+class ChatsRecord extends FirestoreRecord {
+  ChatsRecord._(
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
+    _initializeFields();
+  }
 
-abstract class ChatsRecord implements Built<ChatsRecord, ChatsRecordBuilder> {
-  static Serializer<ChatsRecord> get serializer => _$chatsRecordSerializer;
+  // "user" field.
+  DocumentReference? _user;
+  DocumentReference? get user => _user;
+  bool hasUser() => _user != null;
 
-  DocumentReference? get user;
+  // "user_a" field.
+  DocumentReference? _userA;
+  DocumentReference? get userA => _userA;
+  bool hasUserA() => _userA != null;
 
-  @BuiltValueField(wireName: 'user_a')
-  DocumentReference? get userA;
+  // "user_b" field.
+  DocumentReference? _userB;
+  DocumentReference? get userB => _userB;
+  bool hasUserB() => _userB != null;
 
-  @BuiltValueField(wireName: 'user_b')
-  DocumentReference? get userB;
+  // "last_message" field.
+  String? _lastMessage;
+  String get lastMessage => _lastMessage ?? '';
+  bool hasLastMessage() => _lastMessage != null;
 
-  @BuiltValueField(wireName: 'last_message')
-  String? get lastMessage;
+  // "last_message_time" field.
+  DateTime? _lastMessageTime;
+  DateTime? get lastMessageTime => _lastMessageTime;
+  bool hasLastMessageTime() => _lastMessageTime != null;
 
-  @BuiltValueField(wireName: 'last_message_time')
-  DateTime? get lastMessageTime;
+  // "image" field.
+  String? _image;
+  String get image => _image ?? '';
+  bool hasImage() => _image != null;
 
-  String? get image;
+  // "message_seen" field.
+  bool? _messageSeen;
+  bool get messageSeen => _messageSeen ?? false;
+  bool hasMessageSeen() => _messageSeen != null;
 
-  @BuiltValueField(wireName: 'message_seen')
-  bool? get messageSeen;
-
-  @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference? get ffRef;
-  DocumentReference get reference => ffRef!;
-
-  static void _initializeBuilder(ChatsRecordBuilder builder) => builder
-    ..lastMessage = ''
-    ..image = ''
-    ..messageSeen = false;
+  void _initializeFields() {
+    _user = snapshotData['user'] as DocumentReference?;
+    _userA = snapshotData['user_a'] as DocumentReference?;
+    _userB = snapshotData['user_b'] as DocumentReference?;
+    _lastMessage = snapshotData['last_message'] as String?;
+    _lastMessageTime = snapshotData['last_message_time'] as DateTime?;
+    _image = snapshotData['image'] as String?;
+    _messageSeen = snapshotData['message_seen'] as bool?;
+  }
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('chats');
 
-  static Stream<ChatsRecord> getDocument(DocumentReference ref) => ref
-      .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Stream<ChatsRecord> getDocument(DocumentReference ref) =>
+      ref.snapshots().map((s) => ChatsRecord.fromSnapshot(s));
 
-  static Future<ChatsRecord> getDocumentOnce(DocumentReference ref) => ref
-      .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Future<ChatsRecord> getDocumentOnce(DocumentReference ref) =>
+      ref.get().then((s) => ChatsRecord.fromSnapshot(s));
 
-  ChatsRecord._();
-  factory ChatsRecord([void Function(ChatsRecordBuilder) updates]) =
-      _$ChatsRecord;
+  static ChatsRecord fromSnapshot(DocumentSnapshot snapshot) => ChatsRecord._(
+        snapshot.reference,
+        mapFromFirestore(snapshot.data() as Map<String, dynamic>),
+      );
 
   static ChatsRecord getDocumentFromData(
-          Map<String, dynamic> data, DocumentReference reference) =>
-      serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
+    Map<String, dynamic> data,
+    DocumentReference reference,
+  ) =>
+      ChatsRecord._(reference, mapFromFirestore(data));
+
+  @override
+  String toString() =>
+      'ChatsRecord(reference: ${reference.path}, data: $snapshotData)';
 }
 
 Map<String, dynamic> createChatsRecordData({
@@ -67,18 +93,16 @@ Map<String, dynamic> createChatsRecordData({
   String? image,
   bool? messageSeen,
 }) {
-  final firestoreData = serializers.toFirestore(
-    ChatsRecord.serializer,
-    ChatsRecord(
-      (c) => c
-        ..user = user
-        ..userA = userA
-        ..userB = userB
-        ..lastMessage = lastMessage
-        ..lastMessageTime = lastMessageTime
-        ..image = image
-        ..messageSeen = messageSeen,
-    ),
+  final firestoreData = mapToFirestore(
+    <String, dynamic>{
+      'user': user,
+      'user_a': userA,
+      'user_b': userB,
+      'last_message': lastMessage,
+      'last_message_time': lastMessageTime,
+      'image': image,
+      'message_seen': messageSeen,
+    }.withoutNulls,
   );
 
   return firestoreData;

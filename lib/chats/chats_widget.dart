@@ -89,6 +89,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             body: SafeArea(
+              top: true,
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -121,7 +122,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              Navigator.pop(context);
+                                              context.pop();
                                             },
                                             child: Icon(
                                               Icons.arrow_back,
@@ -334,7 +335,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                                                               image:
                                                                   Image.network(
                                                                 listViewChatMessagesRecord
-                                                                    .image!,
+                                                                    .image,
                                                               ).image,
                                                             ),
                                                             borderRadius:
@@ -401,7 +402,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                                                             image:
                                                                 Image.network(
                                                               listViewChatMessagesRecord
-                                                                  .image!,
+                                                                  .image,
                                                             ).image,
                                                           ),
                                                           borderRadius:
@@ -566,7 +567,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                                                                       child:
                                                                           Text(
                                                                         listViewChatMessagesRecord
-                                                                            .text!,
+                                                                            .text,
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
@@ -714,7 +715,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                                                                       child:
                                                                           Text(
                                                                         listViewChatMessagesRecord
-                                                                            .text!,
+                                                                            .text,
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(

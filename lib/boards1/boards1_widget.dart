@@ -1,4 +1,3 @@
-import '/boards2/boards2_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -111,14 +110,15 @@ class _Boards1WidgetState extends State<Boards1Widget>
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.rightToLeft,
-                              duration: Duration(milliseconds: 150),
-                              reverseDuration: Duration(milliseconds: 150),
-                              child: Boards2Widget(),
-                            ),
+                          context.pushNamed(
+                            'boards2',
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.rightToLeft,
+                                duration: Duration(milliseconds: 150),
+                              ),
+                            },
                           );
                         },
                         text: 'Next',

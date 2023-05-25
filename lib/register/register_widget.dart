@@ -3,9 +3,6 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
-import '/sign_in/sign_in_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -558,6 +555,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
+                                  GoRouter.of(context).prepareAuthEvent();
                                   if (_model.customerPasswordController.text !=
                                       _model.customerPasswordConfirmController
                                           .text) {
@@ -603,21 +601,11 @@ class _RegisterWidgetState extends State<RegisterWidget> {
 
                                   if (FFAppState().lastVisitedPage ==
                                       'shopping_cart') {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            ShoppingCartWidget(),
-                                      ),
-                                    );
+                                    context.pushNamedAuth(
+                                        'shopping_cart', context.mounted);
                                   } else {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            HomescreenWidget(),
-                                      ),
-                                    );
+                                    context.pushNamedAuth(
+                                        'homescreen', context.mounted);
                                   }
                                 },
                                 text: 'Create Account',
@@ -673,13 +661,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  SignInWidget(),
-                                            ),
-                                          );
+                                          context.pushNamed('Sign_In');
                                         },
                                         child: Text(
                                           'Sign In',

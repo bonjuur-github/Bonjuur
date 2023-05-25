@@ -1,12 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/checklist_for_customer/checklist_for_customer_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/home_page/home_page_widget.dart';
-import '/homescreen/homescreen_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -110,7 +107,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                             size: 20.0,
                           ),
                           onPressed: () async {
-                            Navigator.pop(context);
+                            context.safePop();
                           },
                         ),
                       ],
@@ -215,7 +212,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue1 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD1!,
+                                                                  .kiD1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -336,7 +333,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue2 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD2!,
+                                                                  .kiD2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -457,7 +454,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue3 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD3!,
+                                                                  .kiD3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -578,7 +575,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue4 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD4!,
+                                                                  .kiD4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -699,7 +696,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue5 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD5!,
+                                                                  .kiD5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -820,7 +817,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue6 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD6!,
+                                                                  .kiD6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -941,7 +938,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue7 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD7!,
+                                                                  .kiD7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1062,7 +1059,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue8 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiD8!,
+                                                                  .kiD8,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1249,7 +1246,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue9 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroD1!,
+                                                                  .diroD1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1368,7 +1365,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue10 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroD2!,
+                                                                  .diroD2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1487,7 +1484,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue11 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroD3!,
+                                                                  .diroD3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1669,7 +1666,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue12 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuD1!,
+                                                                  .ofstuD1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1788,7 +1785,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue13 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuD2!,
+                                                                  .ofstuD2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -1907,7 +1904,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue14 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuD3!,
+                                                                  .ofstuD3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2089,7 +2086,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue15 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroD1!,
+                                                                  .faroD1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2208,7 +2205,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue16 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroD2!,
+                                                                  .faroD2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2327,7 +2324,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue17 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroD3!,
+                                                                  .faroD3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2509,7 +2506,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue18 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baD1!,
+                                                                  .baD1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2628,7 +2625,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue19 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baD2!,
+                                                                  .baD2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2747,7 +2744,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue20 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baD3!,
+                                                                  .baD3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2866,7 +2863,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue21 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baD4!,
+                                                                  .baD4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -2985,7 +2982,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue22 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baD5!,
+                                                                  .baD5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3104,7 +3101,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue23 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baD6!,
+                                                                  .baD6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3289,7 +3286,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue24 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beD1!,
+                                                                  .beD1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3408,7 +3405,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue25 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beD2!,
+                                                                  .beD2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3527,7 +3524,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue26 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beD3!,
+                                                                  .beD3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3646,7 +3643,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue27 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beD4!,
+                                                                  .beD4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3839,7 +3836,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue28 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiW1!,
+                                                                  .kiW1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -3958,7 +3955,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue29 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiW2!,
+                                                                  .kiW2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4077,7 +4074,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue30 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiW3!,
+                                                                  .kiW3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4196,7 +4193,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue31 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiW4!,
+                                                                  .kiW4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4315,7 +4312,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue32 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiW5!,
+                                                                  .kiW5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4499,7 +4496,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue33 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW1!,
+                                                                  .diroW1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4618,7 +4615,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue34 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW2!,
+                                                                  .diroW2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4737,7 +4734,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue35 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW3!,
+                                                                  .diroW3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4856,7 +4853,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue36 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW4!,
+                                                                  .diroW4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -4975,7 +4972,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue37 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW5!,
+                                                                  .diroW5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5094,7 +5091,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue38 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW6!,
+                                                                  .diroW6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5213,7 +5210,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue39 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroW7!,
+                                                                  .diroW7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5399,7 +5396,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue40 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuW1!,
+                                                                  .ofstuW1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5518,7 +5515,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue41 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuW2!,
+                                                                  .ofstuW2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5637,7 +5634,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue42 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuW3!,
+                                                                  .ofstuW3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5756,7 +5753,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue43 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuW4!,
+                                                                  .ofstuW4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5875,7 +5872,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue44 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuW5!,
+                                                                  .ofstuW5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -5994,7 +5991,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue45 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuW6!,
+                                                                  .ofstuW6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6179,7 +6176,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue46 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroW1!,
+                                                                  .faroW1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6298,7 +6295,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue47 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroW2!,
+                                                                  .faroW2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6417,7 +6414,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue48 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroW3!,
+                                                                  .faroW3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6536,7 +6533,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue49 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroW4!,
+                                                                  .faroW4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6655,7 +6652,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue50 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroW5!,
+                                                                  .faroW5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6774,7 +6771,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue51 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroW6!,
+                                                                  .faroW6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -6959,7 +6956,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue52 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW1!,
+                                                                  .baW1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7078,7 +7075,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue53 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW2!,
+                                                                  .baW2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7197,7 +7194,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue54 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW3!,
+                                                                  .baW3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7316,7 +7313,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue55 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW4!,
+                                                                  .baW4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7435,7 +7432,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue56 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW5!,
+                                                                  .baW5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7554,7 +7551,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue57 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW6!,
+                                                                  .baW6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7673,7 +7670,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue58 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baW7!,
+                                                                  .baW7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7859,7 +7856,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue59 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW1!,
+                                                                  .beW1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -7978,7 +7975,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue60 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW2!,
+                                                                  .beW2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8097,7 +8094,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue61 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW3!,
+                                                                  .beW3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8216,7 +8213,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue62 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW4!,
+                                                                  .beW4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8335,7 +8332,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue63 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW5!,
+                                                                  .beW5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8454,7 +8451,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue64 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW6!,
+                                                                  .beW6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8573,7 +8570,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue65 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beW7!,
+                                                                  .beW7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8769,7 +8766,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue66 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM1!,
+                                                                  .kiM1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -8888,7 +8885,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue67 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM2!,
+                                                                  .kiM2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9007,7 +9004,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue68 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM3!,
+                                                                  .kiM3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9126,7 +9123,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue69 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM4!,
+                                                                  .kiM4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9245,7 +9242,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue70 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM5!,
+                                                                  .kiM5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9364,7 +9361,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue71 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM6!,
+                                                                  .kiM6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9483,7 +9480,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue72 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM7!,
+                                                                  .kiM7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9602,7 +9599,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue73 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM8!,
+                                                                  .kiM8,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9721,7 +9718,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue74 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM9!,
+                                                                  .kiM9,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -9840,7 +9837,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue75 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiM10!,
+                                                                  .kiM10,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10029,7 +10026,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue76 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM1!,
+                                                                  .diroM1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10148,7 +10145,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue77 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM2!,
+                                                                  .diroM2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10267,7 +10264,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue78 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM3!,
+                                                                  .diroM3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10386,7 +10383,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue79 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM4!,
+                                                                  .diroM4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10505,7 +10502,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue80 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM5!,
+                                                                  .diroM5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10624,7 +10621,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue81 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM6!,
+                                                                  .diroM6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10743,7 +10740,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue82 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM7!,
+                                                                  .diroM7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -10862,7 +10859,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue83 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .diroM8!,
+                                                                  .diroM8,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11049,7 +11046,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue84 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM1!,
+                                                                  .ofstuM1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11168,7 +11165,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue85 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM2!,
+                                                                  .ofstuM2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11287,7 +11284,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue86 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM3!,
+                                                                  .ofstuM3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11406,7 +11403,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue87 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM4!,
+                                                                  .ofstuM4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11525,7 +11522,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue88 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM5!,
+                                                                  .ofstuM5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11644,7 +11641,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue89 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM6!,
+                                                                  .ofstuM6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11763,7 +11760,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue90 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM7!,
+                                                                  .ofstuM7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -11882,7 +11879,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue91 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .ofstuM8!,
+                                                                  .ofstuM8,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12069,7 +12066,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue92 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM1!,
+                                                                  .faroM1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12188,7 +12185,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue93 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM2!,
+                                                                  .faroM2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12307,7 +12304,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue94 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM3!,
+                                                                  .faroM3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12426,7 +12423,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue95 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM4!,
+                                                                  .faroM4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12545,7 +12542,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue96 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM5!,
+                                                                  .faroM5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12664,7 +12661,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue97 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM6!,
+                                                                  .faroM6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12783,7 +12780,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue98 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM7!,
+                                                                  .faroM7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -12902,7 +12899,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue99 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM8!,
+                                                                  .faroM8,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13021,7 +13018,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue100 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM9!,
+                                                                  .faroM9,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13140,7 +13137,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue101 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .faroM10!,
+                                                                  .faroM10,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13330,7 +13327,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue102 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baM1!,
+                                                                  .baM1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13449,7 +13446,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue103 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baM2!,
+                                                                  .baM2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13568,7 +13565,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue104 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baM3!,
+                                                                  .baM3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13687,7 +13684,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue105 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM4!,
+                                                                  .beM4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13806,7 +13803,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue106 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM5!,
+                                                                  .beM5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -13925,7 +13922,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue107 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .baM6!,
+                                                                  .baM6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14110,7 +14107,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue108 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM1!,
+                                                                  .beM1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14229,7 +14226,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue109 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM2!,
+                                                                  .beM2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14348,7 +14345,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue110 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM3!,
+                                                                  .beM3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14467,7 +14464,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue111 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM4!,
+                                                                  .beM4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14586,7 +14583,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue112 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM5!,
+                                                                  .beM5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14705,7 +14702,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue113 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM6!,
+                                                                  .beM6,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -14824,7 +14821,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue114 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .beM7!,
+                                                                  .beM7,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -15020,7 +15017,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue115 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiUp1!,
+                                                                  .kiUp1,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -15139,7 +15136,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue116 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiUp2!,
+                                                                  .kiUp2,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -15258,7 +15255,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue117 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiUp3!,
+                                                                  .kiUp3,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -15377,7 +15374,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue118 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiUp4!,
+                                                                  .kiUp4,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -15496,7 +15493,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                                                           value: _model
                                                                   .checkboxValue119 ??=
                                                               checklistForCleanerKeepingPlusIsDoneFormRecord!
-                                                                  .kiUp5!,
+                                                                  .kiUp5,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
@@ -15674,12 +15671,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                               size: 25.0,
                             ),
                             onPressed: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomescreenWidget(),
-                                ),
-                              );
+                              context.pushNamed('homescreen');
                             },
                           ),
                           FlutterFlowIconButton(
@@ -15696,21 +15688,9 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                               if (valueOrDefault(
                                       currentUserDocument?.userType, '') ==
                                   'cleaner') {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        ChecklistForCleanerWidget(),
-                                  ),
-                                );
+                                context.pushNamed('checklist_for_cleaner');
                               } else {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        ChecklistForCustomerWidget(),
-                                  ),
-                                );
+                                context.pushNamed('checklist_for_customer');
                               }
                             },
                           ),
@@ -15725,12 +15705,7 @@ class _ChecklistForCleanerWidgetState extends State<ChecklistForCleanerWidget> {
                               size: 30.0,
                             ),
                             onPressed: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomePageWidget(),
-                                ),
-                              );
+                              context.pushNamed('HomePage');
                             },
                           ),
                         ],

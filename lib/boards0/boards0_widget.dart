@@ -1,10 +1,8 @@
 import '/auth/base_auth_user_provider.dart';
-import '/boards1/boards1_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/homescreen/homescreen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -114,24 +112,27 @@ class _Boards0WidgetState extends State<Boards0Widget>
                       child: FFButtonWidget(
                         onPressed: () async {
                           if (loggedIn) {
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 200),
-                                reverseDuration: Duration(milliseconds: 200),
-                                child: HomescreenWidget(),
-                              ),
+                            context.pushNamed(
+                              'homescreen',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                  duration: Duration(milliseconds: 200),
+                                ),
+                              },
                             );
                           } else {
-                            await Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.rightToLeft,
-                                duration: Duration(milliseconds: 150),
-                                reverseDuration: Duration(milliseconds: 150),
-                                child: Boards1Widget(),
-                              ),
+                            context.pushNamed(
+                              'boards1',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType:
+                                      PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 150),
+                                ),
+                              },
                             );
                           }
                         },

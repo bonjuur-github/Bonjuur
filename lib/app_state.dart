@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'backend/backend.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 import 'backend/api_requests/api_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
@@ -122,6 +123,24 @@ class FFAppState extends ChangeNotifier {
   String get lastVisitedPage => _lastVisitedPage;
   set lastVisitedPage(String _value) {
     _lastVisitedPage = _value;
+  }
+
+  String _stt = 'Speak...';
+  String get stt => _stt;
+  set stt(String _value) {
+    _stt = _value;
+  }
+
+  String _btnTalk = 'Talk';
+  String get btnTalk => _btnTalk;
+  set btnTalk(String _value) {
+    _btnTalk = _value;
+  }
+
+  String _sttSendText = '';
+  String get sttSendText => _sttSendText;
+  set sttSendText(String _value) {
+    _sttSendText = _value;
   }
 }
 

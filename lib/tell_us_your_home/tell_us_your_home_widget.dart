@@ -1,4 +1,3 @@
-import '/calendar_page/calendar_page_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_radio_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -83,7 +82,7 @@ class _TellUsYourHomeWidgetState extends State<TellUsYourHomeWidget> {
                         size: 20.0,
                       ),
                       onPressed: () async {
-                        Navigator.pop(context);
+                        context.safePop();
                         setState(() {});
                       },
                     ),
@@ -615,17 +614,19 @@ class _TellUsYourHomeWidgetState extends State<TellUsYourHomeWidget> {
                                       _model.radioButtonValue1!;
                                   FFAppState().lastVisitedPage =
                                       'tell_us_your_home';
-                                  await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => CalendarPageWidget(
-                                        neededHoursReceived: functions
+
+                                  context.pushNamed(
+                                    'calendarPage',
+                                    queryParams: {
+                                      'neededHoursReceived': serializeParam(
+                                        functions
                                             .shortenversion(
                                                 _model.radioButtonValue1,
                                                 _model.radioButtonValue2)
                                             ?.toDouble(),
+                                        ParamType.double,
                                       ),
-                                    ),
+                                    }.withoutNulls,
                                   );
                                 },
                                 text: 'Schedule Now',

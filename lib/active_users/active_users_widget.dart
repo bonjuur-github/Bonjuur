@@ -3,7 +3,6 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/home_page/home_page_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -57,6 +56,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
+          top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -81,7 +81,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    Navigator.pop(context);
+                                    context.pop();
                                   },
                                   child: Icon(
                                     Icons.arrow_back,
@@ -323,13 +323,8 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                       await ChatsRecord.collection
                                           .doc()
                                           .set(chatsCreateData);
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              HomePageWidget(),
-                                        ),
-                                      );
+
+                                      context.pushNamed('HomePage');
                                     },
                                     child: Container(
                                       width: 100.0,
@@ -369,7 +364,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                                       ),
                                                       child: Image.network(
                                                         listViewUsersRecord
-                                                            .photoUrl!,
+                                                            .photoUrl,
                                                         fit: BoxFit.cover,
                                                       ),
                                                     ),
@@ -390,7 +385,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                                         children: [
                                                           Text(
                                                             listViewUsersRecord
-                                                                .displayName!,
+                                                                .displayName,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -411,7 +406,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                                                         0.0),
                                                             child: Text(
                                                               listViewUsersRecord
-                                                                  .email!,
+                                                                  .email,
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -496,13 +491,8 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                       await ChatsRecord.collection
                                           .doc()
                                           .set(chatsCreateData);
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              HomePageWidget(),
-                                        ),
-                                      );
+
+                                      context.pushNamed('HomePage');
                                     },
                                     child: Container(
                                       width: 100.0,
@@ -541,8 +531,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                                         shape: BoxShape.circle,
                                                       ),
                                                       child: Image.network(
-                                                        searchDataItem
-                                                            .photoUrl!,
+                                                        searchDataItem.photoUrl,
                                                         fit: BoxFit.cover,
                                                       ),
                                                     ),
@@ -563,7 +552,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                                         children: [
                                                           Text(
                                                             searchDataItem
-                                                                .displayName!,
+                                                                .displayName,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -584,7 +573,7 @@ class _ActiveUsersWidgetState extends State<ActiveUsersWidget> {
                                                                         0.0),
                                                             child: Text(
                                                               searchDataItem
-                                                                  .email!,
+                                                                  .email,
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium

@@ -1,72 +1,100 @@
 import 'dart:async';
 
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
+
 import 'index.dart';
-import 'serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-part 'cleaners_record.g.dart';
+class CleanersRecord extends FirestoreRecord {
+  CleanersRecord._(
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
+    _initializeFields();
+  }
 
-abstract class CleanersRecord
-    implements Built<CleanersRecord, CleanersRecordBuilder> {
-  static Serializer<CleanersRecord> get serializer =>
-      _$cleanersRecordSerializer;
+  // "email" field.
+  String? _email;
+  String get email => _email ?? '';
+  bool hasEmail() => _email != null;
 
-  String? get email;
+  // "display_name" field.
+  String? _displayName;
+  String get displayName => _displayName ?? '';
+  bool hasDisplayName() => _displayName != null;
 
-  @BuiltValueField(wireName: 'display_name')
-  String? get displayName;
+  // "photo_url" field.
+  String? _photoUrl;
+  String get photoUrl => _photoUrl ?? '';
+  bool hasPhotoUrl() => _photoUrl != null;
 
-  @BuiltValueField(wireName: 'photo_url')
-  String? get photoUrl;
+  // "uid" field.
+  String? _uid;
+  String get uid => _uid ?? '';
+  bool hasUid() => _uid != null;
 
-  String? get uid;
+  // "created_time" field.
+  DateTime? _createdTime;
+  DateTime? get createdTime => _createdTime;
+  bool hasCreatedTime() => _createdTime != null;
 
-  @BuiltValueField(wireName: 'created_time')
-  DateTime? get createdTime;
+  // "phone_number" field.
+  String? _phoneNumber;
+  String get phoneNumber => _phoneNumber ?? '';
+  bool hasPhoneNumber() => _phoneNumber != null;
 
-  @BuiltValueField(wireName: 'phone_number')
-  String? get phoneNumber;
+  // "edited_time" field.
+  DateTime? _editedTime;
+  DateTime? get editedTime => _editedTime;
+  bool hasEditedTime() => _editedTime != null;
 
-  @BuiltValueField(wireName: 'edited_time')
-  DateTime? get editedTime;
+  // "bio" field.
+  String? _bio;
+  String get bio => _bio ?? '';
+  bool hasBio() => _bio != null;
 
-  String? get bio;
+  // "user_name" field.
+  String? _userName;
+  String get userName => _userName ?? '';
+  bool hasUserName() => _userName != null;
 
-  @BuiltValueField(wireName: 'user_name')
-  String? get userName;
-
-  @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference? get ffRef;
-  DocumentReference get reference => ffRef!;
-
-  static void _initializeBuilder(CleanersRecordBuilder builder) => builder
-    ..email = ''
-    ..displayName = ''
-    ..photoUrl = ''
-    ..uid = ''
-    ..phoneNumber = ''
-    ..bio = ''
-    ..userName = '';
+  void _initializeFields() {
+    _email = snapshotData['email'] as String?;
+    _displayName = snapshotData['display_name'] as String?;
+    _photoUrl = snapshotData['photo_url'] as String?;
+    _uid = snapshotData['uid'] as String?;
+    _createdTime = snapshotData['created_time'] as DateTime?;
+    _phoneNumber = snapshotData['phone_number'] as String?;
+    _editedTime = snapshotData['edited_time'] as DateTime?;
+    _bio = snapshotData['bio'] as String?;
+    _userName = snapshotData['user_name'] as String?;
+  }
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('cleaners');
 
-  static Stream<CleanersRecord> getDocument(DocumentReference ref) => ref
-      .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Stream<CleanersRecord> getDocument(DocumentReference ref) =>
+      ref.snapshots().map((s) => CleanersRecord.fromSnapshot(s));
 
-  static Future<CleanersRecord> getDocumentOnce(DocumentReference ref) => ref
-      .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Future<CleanersRecord> getDocumentOnce(DocumentReference ref) =>
+      ref.get().then((s) => CleanersRecord.fromSnapshot(s));
 
-  CleanersRecord._();
-  factory CleanersRecord([void Function(CleanersRecordBuilder) updates]) =
-      _$CleanersRecord;
+  static CleanersRecord fromSnapshot(DocumentSnapshot snapshot) =>
+      CleanersRecord._(
+        snapshot.reference,
+        mapFromFirestore(snapshot.data() as Map<String, dynamic>),
+      );
 
   static CleanersRecord getDocumentFromData(
-          Map<String, dynamic> data, DocumentReference reference) =>
-      serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
+    Map<String, dynamic> data,
+    DocumentReference reference,
+  ) =>
+      CleanersRecord._(reference, mapFromFirestore(data));
+
+  @override
+  String toString() =>
+      'CleanersRecord(reference: ${reference.path}, data: $snapshotData)';
 }
 
 Map<String, dynamic> createCleanersRecordData({
@@ -80,20 +108,18 @@ Map<String, dynamic> createCleanersRecordData({
   String? bio,
   String? userName,
 }) {
-  final firestoreData = serializers.toFirestore(
-    CleanersRecord.serializer,
-    CleanersRecord(
-      (c) => c
-        ..email = email
-        ..displayName = displayName
-        ..photoUrl = photoUrl
-        ..uid = uid
-        ..createdTime = createdTime
-        ..phoneNumber = phoneNumber
-        ..editedTime = editedTime
-        ..bio = bio
-        ..userName = userName,
-    ),
+  final firestoreData = mapToFirestore(
+    <String, dynamic>{
+      'email': email,
+      'display_name': displayName,
+      'photo_url': photoUrl,
+      'uid': uid,
+      'created_time': createdTime,
+      'phone_number': phoneNumber,
+      'edited_time': editedTime,
+      'bio': bio,
+      'user_name': userName,
+    }.withoutNulls,
   );
 
   return firestoreData;

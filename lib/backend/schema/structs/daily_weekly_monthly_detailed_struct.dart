@@ -1,42 +1,128 @@
-import 'dart:async';
+// ignore_for_file: unnecessary_getters_setters
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../index.dart';
-import '../serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
 
-part 'daily_weekly_monthly_detailed_struct.g.dart';
+import 'index.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-abstract class DailyWeeklyMonthlyDetailedStruct
-    implements
-        Built<DailyWeeklyMonthlyDetailedStruct,
-            DailyWeeklyMonthlyDetailedStructBuilder> {
-  static Serializer<DailyWeeklyMonthlyDetailedStruct> get serializer =>
-      _$dailyWeeklyMonthlyDetailedStructSerializer;
+class DailyWeeklyMonthlyDetailedStruct extends FFFirebaseStruct {
+  DailyWeeklyMonthlyDetailedStruct({
+    List<String>? dailies,
+    List<String>? weeklies,
+    List<String>? monthlies,
+    List<String>? detailed,
+    FirestoreUtilData firestoreUtilData = const FirestoreUtilData(),
+  })  : _dailies = dailies,
+        _weeklies = weeklies,
+        _monthlies = monthlies,
+        _detailed = detailed,
+        super(firestoreUtilData);
 
-  BuiltList<String>? get dailies;
+  // "dailies" field.
+  List<String>? _dailies;
+  List<String> get dailies => _dailies ?? const [];
+  set dailies(List<String>? val) => _dailies = val;
+  void updateDailies(Function(List<String>) updateFn) =>
+      updateFn(_dailies ??= []);
+  bool hasDailies() => _dailies != null;
 
-  BuiltList<String>? get weeklies;
+  // "weeklies" field.
+  List<String>? _weeklies;
+  List<String> get weeklies => _weeklies ?? const [];
+  set weeklies(List<String>? val) => _weeklies = val;
+  void updateWeeklies(Function(List<String>) updateFn) =>
+      updateFn(_weeklies ??= []);
+  bool hasWeeklies() => _weeklies != null;
 
-  BuiltList<String>? get monthlies;
+  // "monthlies" field.
+  List<String>? _monthlies;
+  List<String> get monthlies => _monthlies ?? const [];
+  set monthlies(List<String>? val) => _monthlies = val;
+  void updateMonthlies(Function(List<String>) updateFn) =>
+      updateFn(_monthlies ??= []);
+  bool hasMonthlies() => _monthlies != null;
 
-  BuiltList<String>? get detailed;
+  // "detailed" field.
+  List<String>? _detailed;
+  List<String> get detailed => _detailed ?? const [];
+  set detailed(List<String>? val) => _detailed = val;
+  void updateDetailed(Function(List<String>) updateFn) =>
+      updateFn(_detailed ??= []);
+  bool hasDetailed() => _detailed != null;
 
-  /// Utility class for Firestore updates
-  FirestoreUtilData get firestoreUtilData;
+  static DailyWeeklyMonthlyDetailedStruct fromMap(Map<String, dynamic> data) =>
+      DailyWeeklyMonthlyDetailedStruct(
+        dailies: getDataList(data['dailies']),
+        weeklies: getDataList(data['weeklies']),
+        monthlies: getDataList(data['monthlies']),
+        detailed: getDataList(data['detailed']),
+      );
 
-  static void _initializeBuilder(
-          DailyWeeklyMonthlyDetailedStructBuilder builder) =>
-      builder
-        ..dailies = ListBuilder()
-        ..weeklies = ListBuilder()
-        ..monthlies = ListBuilder()
-        ..detailed = ListBuilder()
-        ..firestoreUtilData = FirestoreUtilData();
+  static DailyWeeklyMonthlyDetailedStruct? maybeFromMap(dynamic data) =>
+      data is Map<String, dynamic>
+          ? DailyWeeklyMonthlyDetailedStruct.fromMap(data)
+          : null;
 
-  DailyWeeklyMonthlyDetailedStruct._();
-  factory DailyWeeklyMonthlyDetailedStruct(
-          [void Function(DailyWeeklyMonthlyDetailedStructBuilder) updates]) =
-      _$DailyWeeklyMonthlyDetailedStruct;
+  Map<String, dynamic> toMap() => {
+        'dailies': _dailies,
+        'weeklies': _weeklies,
+        'monthlies': _monthlies,
+        'detailed': _detailed,
+      }.withoutNulls;
+
+  @override
+  Map<String, dynamic> toSerializableMap() => {
+        'dailies': serializeParam(
+          _dailies,
+          ParamType.String,
+          true,
+        ),
+        'weeklies': serializeParam(
+          _weeklies,
+          ParamType.String,
+          true,
+        ),
+        'monthlies': serializeParam(
+          _monthlies,
+          ParamType.String,
+          true,
+        ),
+        'detailed': serializeParam(
+          _detailed,
+          ParamType.String,
+          true,
+        ),
+      }.withoutNulls;
+
+  static DailyWeeklyMonthlyDetailedStruct fromSerializableMap(
+          Map<String, dynamic> data) =>
+      DailyWeeklyMonthlyDetailedStruct(
+        dailies: deserializeParam<String>(
+          data['dailies'],
+          ParamType.String,
+          true,
+        ),
+        weeklies: deserializeParam<String>(
+          data['weeklies'],
+          ParamType.String,
+          true,
+        ),
+        monthlies: deserializeParam<String>(
+          data['monthlies'],
+          ParamType.String,
+          true,
+        ),
+        detailed: deserializeParam<String>(
+          data['detailed'],
+          ParamType.String,
+          true,
+        ),
+      );
+
+  @override
+  String toString() => 'DailyWeeklyMonthlyDetailedStruct(${toMap()})';
 }
 
 DailyWeeklyMonthlyDetailedStruct createDailyWeeklyMonthlyDetailedStruct({
@@ -46,29 +132,21 @@ DailyWeeklyMonthlyDetailedStruct createDailyWeeklyMonthlyDetailedStruct({
   bool delete = false,
 }) =>
     DailyWeeklyMonthlyDetailedStruct(
-      (d) => d
-        ..dailies = null
-        ..weeklies = null
-        ..monthlies = null
-        ..detailed = null
-        ..firestoreUtilData = FirestoreUtilData(
-          clearUnsetFields: clearUnsetFields,
-          create: create,
-          delete: delete,
-          fieldValues: fieldValues,
-        ),
+      firestoreUtilData: FirestoreUtilData(
+        clearUnsetFields: clearUnsetFields,
+        create: create,
+        delete: delete,
+        fieldValues: fieldValues,
+      ),
     );
 
 DailyWeeklyMonthlyDetailedStruct? updateDailyWeeklyMonthlyDetailedStruct(
   DailyWeeklyMonthlyDetailedStruct? dailyWeeklyMonthlyDetailed, {
   bool clearUnsetFields = true,
 }) =>
-    dailyWeeklyMonthlyDetailed != null
-        ? (dailyWeeklyMonthlyDetailed.toBuilder()
-              ..firestoreUtilData =
-                  FirestoreUtilData(clearUnsetFields: clearUnsetFields))
-            .build()
-        : null;
+    dailyWeeklyMonthlyDetailed
+      ?..firestoreUtilData =
+          FirestoreUtilData(clearUnsetFields: clearUnsetFields);
 
 void addDailyWeeklyMonthlyDetailedStructData(
   Map<String, dynamic> firestoreData,
@@ -96,8 +174,6 @@ void addDailyWeeklyMonthlyDetailedStructData(
 
   final create = dailyWeeklyMonthlyDetailed.firestoreUtilData.create;
   firestoreData.addAll(create ? mergeNestedFields(nestedData) : nestedData);
-
-  return;
 }
 
 Map<String, dynamic> getDailyWeeklyMonthlyDetailedFirestoreData(
@@ -107,8 +183,7 @@ Map<String, dynamic> getDailyWeeklyMonthlyDetailedFirestoreData(
   if (dailyWeeklyMonthlyDetailed == null) {
     return {};
   }
-  final firestoreData = serializers.toFirestore(
-      DailyWeeklyMonthlyDetailedStruct.serializer, dailyWeeklyMonthlyDetailed);
+  final firestoreData = mapToFirestore(dailyWeeklyMonthlyDetailed.toMap());
 
   // Add any Firestore field values
   dailyWeeklyMonthlyDetailed.firestoreUtilData.fieldValues
@@ -121,6 +196,6 @@ List<Map<String, dynamic>> getDailyWeeklyMonthlyDetailedListFirestoreData(
   List<DailyWeeklyMonthlyDetailedStruct>? dailyWeeklyMonthlyDetaileds,
 ) =>
     dailyWeeklyMonthlyDetaileds
-        ?.map((d) => getDailyWeeklyMonthlyDetailedFirestoreData(d, true))
+        ?.map((e) => getDailyWeeklyMonthlyDetailedFirestoreData(e, true))
         .toList() ??
     [];

@@ -41,6 +41,7 @@ class _TermOfUseWidgetState extends State<TermOfUseWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
+        top: true,
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -63,7 +64,7 @@ class _TermOfUseWidgetState extends State<TermOfUseWidget> {
                         size: 20.0,
                       ),
                       onPressed: () async {
-                        Navigator.pop(context);
+                        context.pop();
                       },
                     ),
                   ],

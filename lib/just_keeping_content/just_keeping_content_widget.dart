@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/homescreen/homescreen_widget.dart';
-import '/tell_us_your_home/tell_us_your_home_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -332,13 +330,9 @@ class _JustKeepingContentWidgetState extends State<JustKeepingContentWidget>
                                                           FFAppState()
                                                                   .lastVisitedPage =
                                                               'just_keeping';
-                                                          await Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  TellUsYourHomeWidget(),
-                                                            ),
-                                                          );
+
+                                                          context.pushNamed(
+                                                              'tell_us_your_home');
                                                         },
                                                         text: 'Subscribe Now',
                                                         options:
@@ -423,13 +417,7 @@ class _JustKeepingContentWidgetState extends State<JustKeepingContentWidget>
                               size: 20.0,
                             ),
                             onPressed: () async {
-                              await Navigator.pushAndRemoveUntil(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomescreenWidget(),
-                                ),
-                                (r) => false,
-                              );
+                              context.goNamed('homescreen');
                             },
                           ),
                         ],

@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/shopping_cart/shopping_cart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -90,7 +89,7 @@ class _CalendarPageWidgetState extends State<CalendarPageWidget> {
                           size: 20.0,
                         ),
                         onPressed: () async {
-                          Navigator.pop(context);
+                          context.safePop();
                         },
                       ),
                     ],
@@ -259,12 +258,8 @@ class _CalendarPageWidgetState extends State<CalendarPageWidget> {
                                 FFAppState().neededHours =
                                     widget.neededHoursReceived!;
                                 FFAppState().lastVisitedPage = 'calendar';
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => ShoppingCartWidget(),
-                                  ),
-                                );
+
+                                context.pushNamed('shopping_cart');
                               },
                               text: 'Schedule Now',
                               options: FFButtonOptions(

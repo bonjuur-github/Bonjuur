@@ -1,53 +1,57 @@
 import 'dart:async';
 
+import '/backend/schema/util/firestore_util.dart';
+import '/backend/schema/util/schema_util.dart';
+
 import 'index.dart';
-import 'serializers.dart';
-import 'package:built_value/built_value.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
-part 'just_keeping_record.g.dart';
+class JustKeepingRecord extends FirestoreRecord {
+  JustKeepingRecord._(
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
+    _initializeFields();
+  }
 
-abstract class JustKeepingRecord
-    implements Built<JustKeepingRecord, JustKeepingRecordBuilder> {
-  static Serializer<JustKeepingRecord> get serializer =>
-      _$justKeepingRecordSerializer;
+  // "general_cleaning" field.
+  List<String>? _generalCleaning;
+  List<String> get generalCleaning => _generalCleaning ?? const [];
+  bool hasGeneralCleaning() => _generalCleaning != null;
 
-  @BuiltValueField(wireName: 'general_cleaning')
-  BuiltList<String>? get generalCleaning;
-
-  @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference? get ffRef;
-  DocumentReference get reference => ffRef!;
-
-  static void _initializeBuilder(JustKeepingRecordBuilder builder) =>
-      builder..generalCleaning = ListBuilder();
+  void _initializeFields() {
+    _generalCleaning = getDataList(snapshotData['general_cleaning']);
+  }
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('just_keeping');
 
-  static Stream<JustKeepingRecord> getDocument(DocumentReference ref) => ref
-      .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Stream<JustKeepingRecord> getDocument(DocumentReference ref) =>
+      ref.snapshots().map((s) => JustKeepingRecord.fromSnapshot(s));
 
-  static Future<JustKeepingRecord> getDocumentOnce(DocumentReference ref) => ref
-      .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
+  static Future<JustKeepingRecord> getDocumentOnce(DocumentReference ref) =>
+      ref.get().then((s) => JustKeepingRecord.fromSnapshot(s));
 
-  JustKeepingRecord._();
-  factory JustKeepingRecord([void Function(JustKeepingRecordBuilder) updates]) =
-      _$JustKeepingRecord;
+  static JustKeepingRecord fromSnapshot(DocumentSnapshot snapshot) =>
+      JustKeepingRecord._(
+        snapshot.reference,
+        mapFromFirestore(snapshot.data() as Map<String, dynamic>),
+      );
 
   static JustKeepingRecord getDocumentFromData(
-          Map<String, dynamic> data, DocumentReference reference) =>
-      serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
+    Map<String, dynamic> data,
+    DocumentReference reference,
+  ) =>
+      JustKeepingRecord._(reference, mapFromFirestore(data));
+
+  @override
+  String toString() =>
+      'JustKeepingRecord(reference: ${reference.path}, data: $snapshotData)';
 }
 
 Map<String, dynamic> createJustKeepingRecordData() {
-  final firestoreData = serializers.toFirestore(
-    JustKeepingRecord.serializer,
-    JustKeepingRecord(
-      (j) => j..generalCleaning = null,
-    ),
+  final firestoreData = mapToFirestore(
+    <String, dynamic>{}.withoutNulls,
   );
 
   return firestoreData;
